@@ -1,5 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy.orm import Session
+from fastapi import APIRouter, HTTPException
 from datetime import timedelta
 from .schemas import UserCreate, User
 from .crud import get_user_by_email, create_user

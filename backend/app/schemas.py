@@ -12,3 +12,17 @@ class User(UserBase):
 
     class Config:
         from_attributes = True
+
+class SubscriptionBase(BaseModel):
+    plan: str
+
+class SubscriptionCreate(SubscriptionBase):
+    pass
+
+class Subscription(SubscriptionBase):
+    id: int
+    user_id: int
+    is_active: bool
+
+    class Config:
+        from_attributes = True
